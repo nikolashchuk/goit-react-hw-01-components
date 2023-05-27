@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
-import { Container, Indicator } from './FriendListItem.styled';
+import { Indicator, Item } from './FriendListItem.styled';
 
-export const FriendListItem = ({ friend: { avatar, name, isOnline } }) => {
+export const FriendListItem = ({ friend: { id, avatar, name, isOnline } }) => {
   return (
-    <Container>
+    <Item key={id}>
       <Indicator isOnline={isOnline}> </Indicator>
       <img src={avatar} alt={name} width="48" />
       <p>{name}</p>
-    </Container>
+    </Item>
   );
 };
 

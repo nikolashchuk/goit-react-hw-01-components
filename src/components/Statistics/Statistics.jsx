@@ -4,7 +4,7 @@ import { Item, List, Title } from './Statistics.styled';
 export const Statistics = ({ title, stats }) => {
   return (
     <section>
-      <Title>{title}</Title>
+      {title && <Title>{title}</Title>}
 
       <List>
         {stats.map(item => {
